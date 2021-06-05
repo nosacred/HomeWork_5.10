@@ -1,7 +1,7 @@
 public class Keyboard {
-    private static KeyBoardType type;
-    private static String lighting;
-    private static int weight;
+    private  KeyBoardType type;
+    private final String lighting;
+    private  int weight;
 
     public Keyboard(KeyBoardType keyBoardType, KeyBoardLighting keyBoardLighting){
         switch (keyBoardType){
@@ -17,7 +17,7 @@ public class Keyboard {
         lighting=keyBoardLighting.getName();
     }
 
-    public static int getWeight() {
+    public  int getWeight() {
         return weight;
     }
 

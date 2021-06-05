@@ -1,37 +1,37 @@
 public class Screen {
-    private static ScreenType type;
-    private static int size;
-    private static int weight;
+    private   ScreenType type;
+    private  int size;
+    private  int weight;
 
-    public Screen(ScreenType screenType, ScreenSize screenSize){
-        switch (screenType){
+    public Screen(ScreenType type, ScreenSize screenSize){
+        switch (type){
             case TN:
-                type =ScreenType.TN;
+                this.type =ScreenType.TN;
                 break;
             case VA:
-                type =ScreenType.VA;
+                this.type =ScreenType.VA;
                 break;
             case IPS:
-                type =ScreenType.IPS;
+                this.type =ScreenType.IPS;
                 break;
         }
         switch (screenSize){
             case LOW:
-                Screen.size = ScreenSize.LOW.getSize();
+                this.size = ScreenSize.LOW.getSize();
                 weight = 600;
                 break;
             case MIDDLE:
-                Screen.size = ScreenSize.MIDDLE.getSize();
+                this.size = ScreenSize.MIDDLE.getSize();
                 weight = 800;
                 break;
             case BIG:
-                Screen.size = ScreenSize.BIG.getSize();
+                this.size = ScreenSize.BIG.getSize();
                 weight = 1000;
                 break;
         }
     }
-    public static int getWeight(){
-        return weight;
+    public int getWeight(){
+        return this.weight;
     }
     @Override
     public String toString(){

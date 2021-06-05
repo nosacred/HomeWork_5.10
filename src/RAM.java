@@ -1,11 +1,11 @@
 public class RAM {
-    private static String type;
-    private static int quantity;
-    private static int weight;
+    private final String type;
+    private  int quantity;
+    private  int weight;
 
     public RAM(RamType ramType, RamCount ramCount) {
 
-        RAM.type = ramType.getName();
+        this.type = ramType.getName();
         switch (ramCount){
             case FOUR:
                 quantity =ramCount.getSize() ;
@@ -21,10 +21,10 @@ public class RAM {
         }
     }
 
-    public static int getWeight() {
+    public int getWeight() {
         return weight;
     }
-    public static int getQuantity(){
+    public  int getQuantity(){
         return quantity;
     }
 

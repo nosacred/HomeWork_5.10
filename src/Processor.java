@@ -1,9 +1,9 @@
 public class Processor {
 
-    private static int weight;
-    private static int frequency;
-    private static int coreCount;
-    private static String vendor;
+    private int weight;
+    private final int frequency;
+    private final int coreCount;
+    private final String vendor;
 
     public Processor(ProcessorType type, CoreQuantity coreQuantity, CoreFrequency frequency ){
         vendor = type.getName();
@@ -22,11 +22,11 @@ public class Processor {
                 break;
             }
         }
-        coreCount= coreQuantity.getQuantity();
-        Processor.frequency = frequency.getFrequency();
+        this.coreCount= coreQuantity.getQuantity();
+        this.frequency = frequency.getFrequency();
     }
 
-    public static int getWeight(){
+    public  int getWeight(){
         return weight;
     }
 
